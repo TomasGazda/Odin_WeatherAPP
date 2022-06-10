@@ -1,0 +1,229 @@
+html{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+
+body{
+    font-family: 'Orelega One', cursive;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 10fr 4fr;
+    width:100%;
+    height:100%;
+    background-image: url('./background2.jpg');  
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: auto; /* Resize the background image to cover the entire container */
+   
+    
+}
+.top{
+    display: flex;
+    padding-top: 10px;
+    padding-right: 20px;
+    background-color: transparent;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: end;
+}
+.main{
+    background-color: transparent;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 4fr 6fr 4fr;
+
+}
+.hourly{
+    background-color: transparent;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.search{
+    border: none;
+    border-bottom: 2px solid white;
+    /*border-radius: 10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    background: transparent;
+    margin-bottom: 10px;
+    
+}
+
+#place{
+    background: transparent;
+    border: none;
+    background: transparent;
+    padding: 5px 5px 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    
+}
+#place::placeholder{
+    color: #bbb;
+    font-weight: 700;
+}
+
+#place, #place::before, #place::after {
+    box-sizing: border-box;
+  }
+#place_search{
+    border: none;
+    background: transparent url('./search.png') no-repeat center;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+    padding: 5px 5px 5px;
+    color: white;
+}
+#place_search:focus,
+#place:focus {
+  outline: none;
+}
+
+.info{
+    background: transparent;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.today{
+    background: transparent;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.daily{
+    background: transparent;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.info_card{
+    width: 80%;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.info_card .icon{
+    margin: 0;
+    height: 48px;
+    width: 48px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+.icon svg{
+    height: 48px;
+    width: 48px;
+    
+}
+.info_card .name{
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 13px;
+    
+    color: white;
+
+
+}
+.info_card .value{
+    margin: 0;
+    margin-top: 5px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+
+}
+
+.card_today{
+    flex: 1;
+    height: 80%;
+    max-width:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#weather_now{
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+}
+#weather_image{
+ 
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+   
+}
+
+#temperature_now{
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
+#city{
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 32px;
+    margin-left: 10px;
+
+}
+.daily{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+}
+.day_card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 60%;
+    height: 150px;
+}
+.day_image{
+    height: 64px;
+    width: 64px;
+    margin-bottom: 10px;
+
+}
+.day_image svg{
+    height: 64px;
+    width: 64px;
+}
+.day_date, .day_temperature{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
