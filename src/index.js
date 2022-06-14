@@ -1,7 +1,14 @@
 import "./assets/style.css";
-import { getCurrentWeather,getOneCallWeather,getCityPosition} from "./data_manipulation";
-import { getIcon,getDate } from "./utils";
+import { getOneCallWeather} from "./data_manipulation";
 
 
-getCityPosition("London,ON,CA")
-getOneCallWeather();
+$( document ).ready(function() {
+    getOneCallWeather("London,ON,CA");
+
+});
+
+
+$("#place_search").on('click',function(){
+    getOneCallWeather($("#place").val());
+
+});

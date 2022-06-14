@@ -71,21 +71,21 @@ function getIcon(code){
 
 function getDate(time){
     var date = new Date(time*1000);
-    console.log(format(date, 'do MMMM u'));
+    return format(date, 'do MMMM u');
     
 }
 function tempUnits (number){
     if (metric){
-        return number+' '+ '°C';
+        return number.toFixed(0)+' '+ '°C';
     }
-    return number+' '+ '°F';
+    return number.toFixed(0)+' '+ '°F';
 }
 
 function speedUnits(speed){
     if (metric){
-        return number+' '+ 'km/h';
+        return speed+' '+ 'km/h';
     }
-    return number+' '+ 'mi/h';
+    return speed+' '+ 'mi/h';
 
 }
 
